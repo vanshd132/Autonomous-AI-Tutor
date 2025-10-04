@@ -1,0 +1,6 @@
+@echo off
+echo Testing AI Tutor Orchestrator...
+echo.
+echo Running demo...
+python demo.py
+pause
