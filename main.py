@@ -61,6 +61,22 @@ async def orchestrate_conversation(conversation_request: ConversationRequest):
         # Call the appropriate educational tool
         response_data = EducationalTools.call_tool(tool_type, parameters)
         
+        # Add intelligence information to show what was detected
+        intelligence_info = {
+            "detected_parameters": {
+                "topic": parameters.get("topic", parameters.get("concept_to_explain", "Unknown")),
+                "subject": parameters.get("subject", parameters.get("current_topic", "Unknown")),
+                "difficulty": parameters.get("difficulty", parameters.get("desired_depth", "Unknown")),
+                "learning_style": conversation_request.user_info.learning_style_summary,
+                "emotional_state": conversation_request.user_info.emotional_state_summary,
+                "mastery_level": conversation_request.user_info.mastery_level_summary
+            },
+            "reasoning": f"Selected {tool_type} based on conversation analysis and student profile"
+        }
+        
+        # Add intelligence info to response
+        response_data["intelligence_analysis"] = intelligence_info
+        
         return ToolResponse(
             success=True,
             tool_name=tool_type,
