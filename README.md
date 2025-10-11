@@ -2,6 +2,14 @@
 
 An intelligent middleware system that autonomously connects conversational AI tutors to multiple educational tools by extracting required parameters from chat context and managing complex tool interactions.
 
+## 🚀 Past Projects
+
+This project builds upon my previous work in AI and data processing:
+
+- **[Pinecone PDF Uploader](https://github.com/vanshd132/Pinecone)** - A web application for uploading PDF documents, extracting text, chunking content, and storing in Pinecone vector database for RAG chatbots
+- **[Balance Sheet AI Analyst](https://github.com/vanshd132/Balance-Sheet-AI-Analyst-)** - AI-powered balance sheet analysis platform with role-based access (Analyst/CEO/Top Management), Google Gemini integration, and real-time financial insights
+- **[VisionForge](https://github.com/vanshd132/VisionForge)** - Advanced computer vision and image processing project
+
 ## 🚀 Quick Start (Minimal Setup)
 
 ### Prerequisites
